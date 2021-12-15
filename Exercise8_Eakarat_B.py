@@ -15,7 +15,7 @@ if selectPD == "1":
 elif selectPD == "2":
     print("Your choose >> CPU intel Core i5")
     ea = int(input("Please enter the desired amount."))
-    totalPrice = ram_price * ea
+    totalPrice = cpu_price * ea
     print("Total : ",totalPrice,".-THB")
 else:
     print("You have selected the wrong product.")
