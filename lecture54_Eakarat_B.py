@@ -9,7 +9,7 @@ def userLogin():
 def productList():
     print("-------->Welcome Silverbox Shop <--------")
     print(">>1. RAM DDR4 16Gb 2666MHz @ 1,280.-THB")
-    print(">>2. CPU intel Core i5 @ 7,880.-THB")
+    print(">>2. CPU intel Core i5 @ 3,480.-THB")
     print("Buy more than 5000 baht, get 5% discount.")
     print("-----------------------------------------")
 
@@ -45,7 +45,7 @@ def cmSelect():
         print("Total        : ",Price_Calcute(1280,ea),".-THB")
         #print(totalPrice)
     elif PDchoose == "2":
-        print("Your choose >> RAM DDR4 16Gb 2666MHz")
+        print("Your choose >> CPU intel Core i5")
         ea = int(input("Please enter amount :"))
         print("Total        : ",Price_Calcute(3480,ea),".-THB")
     else:
