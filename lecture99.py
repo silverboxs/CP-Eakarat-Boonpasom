@@ -1,26 +1,29 @@
-from cgitb import text
-import math
 from tkinter import *
+import math
 
 def BMIcal(event):
     result = float(textboxWeigth.get()) / math.pow(float(textboxHeight.get())/100,2)
-    print(result)
-    labelResult.configure(result)
-    #labelResult.configure(result)
-    #print(float(textboxWeigth.get()) / math.pow(float(textboxHeight.get())/100,2))
+    #print(result)
+def testLabel(e):
+    #Result.configure("TEST TEXT")
+    #result = float(textboxWeigth.get()) / math.pow(float(textboxHeight.get())/100,2)
+    print(textboxHeight.get())
+    labelResult.configure(textboxHeight.get())
 
 MainWindow = Tk()
-labelHeight = Label(MainWindow,text="ส่วนสูง (cm.)", font=("Tahoma",14))
+labelHeight = Label(MainWindow,text="ความสูง(cm.)")
 labelHeight.grid(row=0,column=0)
-textboxHeight = Entry(MainWindow, font=("Tahoma",14))
+textboxHeight = Entry(MainWindow)
 textboxHeight.grid(row=0,column=1)
-labelWeigth = Label(MainWindow,text="น้ำหนัก (KG.)", font=("Tahoma",14))
-labelWeigth.grid(row=1,column=0)
-textboxWeigth = Entry(MainWindow, font=("Tahoma",14))
-textboxWeigth.grid(row=1,column=1)
-button = Button(MainWindow, text="คำนวณ", font=("Tahoma",14), fg="blue")
+labelWeigth = Label(MainWindow,text="น้ำหนัก (KG.)")
+labelWeigth.grid(row=1, column=0)
+textboxWeigth = Entry(MainWindow)
+textboxWeigth.grid(row=1, column=1)
+button = Button(MainWindow,text="คำนวณ")
+button.bind('<Button-1>',testLabel)
 button.grid(row=2,column=0)
-button.bind('<Button-1>', BMIcal)
-labelResult = Label(MainWindow)
+labelResult = Label(MainWindow, text="")
 labelResult.grid(row=2, column=1)
+
+
 MainWindow.mainloop()
