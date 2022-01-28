@@ -12,8 +12,11 @@ for x in range(len(productList)):
     if productList[x] == IDinput:
         result.append(x+1)
 
+txt = "Position:"+str(result[0])
 print(result)
-for l in result:
-    txt = l,","
+for l in range(len(result)):
+    if l == 0:
+        continue
+    txt += ","+str(result[l])
 
-print("Position:",txt)
+print("Position: ",txt)
