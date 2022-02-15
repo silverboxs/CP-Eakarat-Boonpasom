@@ -55,7 +55,7 @@ def convert_to_BTC(e):
     text_result_now = "ปัจจุบัน Bitcoin ของคุณจะมีมูลค่า\n"+THB_Format.format(conver_btc_last)+".-บาท"
     #Label Result Now
     txt_btc_last = Label(Main,text=text_result_now, font=('Tahoma',16,'bold'))
-    txt_btc_last.place(relx=0.15,rely=0.7)
+    txt_btc_last.place(relx=0.15,rely=0.7,width=400)
 
 Main = Tk()
 Main.geometry("500x500")
